@@ -11,7 +11,9 @@ if game.PlaceId == 2753915549 then
         task.wait(0.1)
     end
 
-    repeat joinpirates() until lp.Character or lp.ChaacterAdded:Wait()
+    for i = 1, 10 do
+        joinpirates()
+    end
 
     local char = lp.Character or lp.CharacterAdded:Wait()
     local PlaceId = game.PlaceId
@@ -34,10 +36,8 @@ if game.PlaceId == 2753915549 then
 
     task.spawn(function()
         task.wait(40)
-        while wait(0.1) do
-            ServerHop()
-        end
-    )
+        ServerHop()
+    end)
 
 
     local function teleport()
@@ -73,7 +73,9 @@ elseif game.PlaceId == 4442272183 then
         task.wait(0.1)
     end
 
-    repeat joinpirates() until lp.Character or lp.ChaacterAdded:Wait()
+    for i = 1, 10 do
+        joinpirates()
+    end
 
     local char = lp.Character or lp.CharacterAdded:Wait()
     local PlaceId = game.PlaceId
@@ -96,10 +98,8 @@ elseif game.PlaceId == 4442272183 then
 
     task.spawn(function()
         task.wait(40)
-        while wait(0.1) do
-            ServerHop()
-        end
-    )
+        ServerHop()
+    end)
 
     local function teleport()
         hrp.CFrame = CFrame.new(175, 39, 2590)
