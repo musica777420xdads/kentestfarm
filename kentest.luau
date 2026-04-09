@@ -31,6 +31,7 @@ if game.PlaceId == 2753915549 then
         }
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
         print("hop")
+        task.wait(0.1)
     end
 
     local function teleport()
@@ -43,8 +44,10 @@ if game.PlaceId == 2753915549 then
 
     if lp:GetAttribute("KenActive") == true then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
-            if v.Name == "Bandit" then
-                hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
+            while wait(0.1) do
+                if v.Name == "Bandit" then
+                    hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
+                end
             end
         end
     elseif lp:GetAttribute("KenActive") == false then
@@ -88,6 +91,7 @@ elseif game.PlaceId == 4442272183 then
         }
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
         print("hop")
+        task.wait(0.1)
     end
 
     local function teleport()
@@ -100,12 +104,12 @@ elseif game.PlaceId == 4442272183 then
 
     if lp:GetAttribute("KenActive") == true then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
-            if v.Name == "Raider" then
-                hrp.CFrame = CFrame.new(v:FindFirstChild("HumanoidRootPart").Position)
+            while wait(0.1) do
+                if v.Name == "Raider" then
+                    hrp.CFrame = CFrame.new(v:FindFirstChild("HumanoidRootPart").Position)
+                end
             end
         end
-    elseif lp:GetAttribute("KenActive") == false then
-        ServerHop()
     end
     if lp:GetAttribute("KenActive") == true then
         while wait(0.1) do
