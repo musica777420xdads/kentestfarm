@@ -26,14 +26,12 @@ if game.PlaceId == 2753915549 then
     local hrp = char.HumanoidRootPart
 
     local function ServerHop()
-        while wait(0.1) do
-            local args = {
-                "TravelDressrosa"
-            }
-            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-            print("hop")
-            task.wait(0.1)
-        end
+        local args = {
+            "TravelDressrosa"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+        print("hop")
+        task.wait(0.1)
     end
 
     local function teleport()
@@ -46,7 +44,7 @@ if game.PlaceId == 2753915549 then
 
     if lp:GetAttribute("KenActive") == true then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
-            if lp:GetAttribute("KenActive") == true do
+            if lp:GetAttribute("KenActive") == true then
                 task.wait(0.1)
                 if v.Name == "Bandit" then
                     hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
@@ -54,7 +52,11 @@ if game.PlaceId == 2753915549 then
                 print("YES KEN")
             elseif lp:GetAttribute("KenActive") == false then
                 print("NO KEN")
-                ServerHop()
+                task.spawn(function()
+                    while wait(1) do 
+                        ServerHop()
+                    end
+                end)
             end
         end
     end
@@ -105,15 +107,19 @@ elseif game.PlaceId == 4442272183 then
 
     if lp:GetAttribute("KenActive") == true then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
-            if lp:GetAttribute("KenActive") == true do
+            if lp:GetAttribute("KenActive") == true then
                 task.wait(0.1)
                 if v.Name == "Raider" then
                     hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
                 end
                 print("YES KEN")
             elseif lp:GetAttribute("KenActive") == false then
-                ServerHop()
                 print("NO KEN")
+                task.spawn(function()
+                    while wait(1) do 
+                        ServerHop()
+                    end
+                end)
             end
         end
     end
