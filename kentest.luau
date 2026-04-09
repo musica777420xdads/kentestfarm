@@ -11,9 +11,7 @@ if game.PlaceId == 2753915549 then
         task.wait(0.1)
     end
 
-    for i = 1, 10 do
-        joinpirates()
-    end
+    repeat joinpirates() until lp.Character or lp.ChaacterAdded:Wait()
 
     local char = lp.Character or lp.CharacterAdded:Wait()
     local PlaceId = game.PlaceId
@@ -75,9 +73,7 @@ elseif game.PlaceId == 4442272183 then
         task.wait(0.1)
     end
 
-    for i = 1, 10 do
-        joinpirates()
-    end
+    repeat joinpirates() until lp.Character or lp.ChaacterAdded:Wait()
 
     local char = lp.Character or lp.CharacterAdded:Wait()
     local PlaceId = game.PlaceId
