@@ -36,7 +36,9 @@ if game.PlaceId == 2753915549 then
 
     task.spawn(function()
         task.wait(40)
-        ServerHop()
+        while wait(0.1) do
+            ServerHop()
+        end
     )
 
 
@@ -98,7 +100,9 @@ elseif game.PlaceId == 4442272183 then
 
     task.spawn(function()
         task.wait(40)
-        ServerHop()
+        while wait(0.1) do
+            ServerHop()
+        end
     )
 
     local function teleport()
