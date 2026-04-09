@@ -106,7 +106,7 @@ elseif game.PlaceId == 4442272183 then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
             while wait(0.1) do
                 if v.Name == "Raider" then
-                    hrp.CFrame = CFrame.new(v:FindFirstChild("HumanoidRootPart").Position)
+                    hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
                 end
             end
         end
