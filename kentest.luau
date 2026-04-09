@@ -12,6 +12,7 @@ if game.PlaceId == 2753915549 then
     for i = 1, 10 do
         joinpirates()
     end
+    queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
 
     local char = lp.Character or lp.CharacterAdded:Wait()
     local PlaceId = game.PlaceId
@@ -24,7 +25,6 @@ if game.PlaceId == 2753915549 then
     local hrp = char.HumanoidRootPart
 
     local function ServerHop()
-        queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
         local args = {
             "TravelDressrosa"
         }
@@ -70,6 +70,7 @@ elseif game.PlaceId == 4442272183 then
     for i = 1, 10 do
         joinpirates()
     end
+    queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
 
     local char = lp.Character or lp.CharacterAdded:Wait()
     local PlaceId = game.PlaceId
@@ -82,7 +83,6 @@ elseif game.PlaceId == 4442272183 then
     local hrp = char.HumanoidRootPart
 
     local function ServerHop()
-        queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
         local args = {
             "TravelMain"
         }
