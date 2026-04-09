@@ -24,6 +24,7 @@ if game.PlaceId == 2753915549 then
     local hrp = char.HumanoidRootPart
 
     local function ServerHop()
+        queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
         local args = {
             "TravelDressrosa"
         }
@@ -81,6 +82,7 @@ elseif game.PlaceId == 4442272183 then
     local hrp = char.HumanoidRootPart
 
     local function ServerHop()
+        queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
         local args = {
             "TravelMain"
         }
