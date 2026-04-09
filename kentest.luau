@@ -44,19 +44,12 @@ if game.PlaceId == 2753915549 then
 
     if lp:GetAttribute("KenActive") == true then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
-            while lp:GetAttribute("KenActive") == true do
+            if lp:GetAttribute("KenActive") == true do
                 task.wait(0.1)
                 if v.Name == "Bandit" then
                     hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
                 end
-            end
-        end
-    elseif lp:GetAttribute("KenActive") == false then
-        ServerHop()
-    end
-    if lp:GetAttribute("KenActive") == true then
-        while wait(0.1) do
-            if lp:GetAttribute("KenActive") == false then
+            elseif lp:GetAttribute("KenActive") == false then
                 ServerHop()
             end
         end
@@ -105,17 +98,12 @@ elseif game.PlaceId == 4442272183 then
 
     if lp:GetAttribute("KenActive") == true then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
-            while lp:GetAttribute("KenActive") == true do
+            if lp:GetAttribute("KenActive") == true do
                 task.wait(0.1)
                 if v.Name == "Raider" then
                     hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
                 end
-            end
-        end
-    end
-    if lp:GetAttribute("KenActive") == true then
-        while wait(0.1) do
-            if lp:GetAttribute("KenActive") == false then
+            elseif lp:GetAttribute("KenActive") == false then
                 ServerHop()
             end
         end
