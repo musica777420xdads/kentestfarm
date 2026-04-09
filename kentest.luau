@@ -53,7 +53,8 @@ if game.PlaceId == 2753915549 then
             elseif lp:GetAttribute("KenActive") == false then
                 print("NO KEN")
                 task.spawn(function()
-                    while wait(1) do 
+                    while wait(1) do
+                        print("SERVERHOP CALLED")
                         ServerHop()
                     end
                 end)
@@ -117,6 +118,7 @@ elseif game.PlaceId == 4442272183 then
                 print("NO KEN")
                 task.spawn(function()
                     while wait(1) do 
+                        print("SERVERHOP CALLED")
                         ServerHop()
                     end
                 end)
