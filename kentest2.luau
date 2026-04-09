@@ -1,4 +1,3 @@
-queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
 repeat task.wait() until game:IsLoaded() and game:GetService("Players") and game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 
 local Players = game:GetService("Players")
@@ -55,3 +54,4 @@ if lp:GetAttribute("KenActive") == true then
         end
     end
 end
+queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/musica777420xdads/kentestfarm/refs/heads/main/kentest.luau"))())
