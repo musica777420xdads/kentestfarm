@@ -42,8 +42,7 @@ if game.PlaceId == 2753915549 then
     if lp:GetAttribute("KenActive") == true then
         for _, v in pairs(workspace.Enemies:GetDescendants()) do
             if v.Name == "Bandit" then
-                task.wait(0.5)
-                v.HumanoidRootPart.CFrame = CFrame.new(961, 17, 1563)
+                hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
             end
         end
     elseif lp:GetAttribute("KenActive") == false then
