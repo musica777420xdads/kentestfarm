@@ -50,15 +50,18 @@ if game.PlaceId == 2753915549 then
                     hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
                 end
                 print("YES KEN")
-            elseif lp:GetAttribute("KenActive") == false then
-                print("NO KEN")
-                task.spawn(function()
-                    while wait(1) do
-                        print("SERVERHOP CALLED")
-                        ServerHop()
-                    end
-                end)
             end
+        end
+    end
+    
+    while wait(0.1) do
+        if lp:GetAttribute("KenActive") == false then
+            print("NO KEN")
+            task.spawn(function()
+                while wait(1) do 
+                    ServerHop()
+                end
+            end)
         end
     end
 elseif game.PlaceId == 4442272183 then
@@ -114,15 +117,17 @@ elseif game.PlaceId == 4442272183 then
                     hrp.CFrame = CFrame.new(v.HumanoidRootPart.Position)
                 end
                 print("YES KEN")
-            elseif lp:GetAttribute("KenActive") == false then
-                print("NO KEN")
-                task.spawn(function()
-                    while wait(1) do 
-                        print("SERVERHOP CALLED")
-                        ServerHop()
-                    end
-                end)
             end
+        end
+    end
+    while wait(0.1) do
+        if lp:GetAttribute("KenActive") == false then
+            print("NO KEN")
+            task.spawn(function()
+                while wait(1) do 
+                    ServerHop()
+                end
+            end)
         end
     end
 end
