@@ -26,19 +26,15 @@ if game.PlaceId == 2753915549 then
     local hrp = char.HumanoidRootPart
 
     local function ServerHop()
-        local args = {
-            "TravelDressrosa"
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-        print("hop")
-        task.wait(0.1)
+        while wait(0.1) do
+            local args = {
+                "TravelDressrosa"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+            print("hop")
+            task.wait(0.1)
+        end
     end
-
-    task.spawn(function()
-        task.wait(40)
-        ServerHop()
-    end)
-
 
     local function teleport()
         hrp.CFrame = CFrame.new(961, 17, 1563)
@@ -88,18 +84,16 @@ elseif game.PlaceId == 4442272183 then
     local hrp = char.HumanoidRootPart
 
     local function ServerHop()
-        local args = {
-            "TravelMain"
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
-        print("hop")
-        task.wait(0.1)
+        while wait(0.1) do
+            local args = {
+                "TravelMain"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+            print("hop")
+            task.wait(0.1)
+        end
     end
 
-    task.spawn(function()
-        task.wait(40)
-        ServerHop()
-    end)
 
     local function teleport()
         hrp.CFrame = CFrame.new(175, 39, 2590)
